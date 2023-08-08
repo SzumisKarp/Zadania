@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(tab = []){
+            let unikaty = tab.filter((element, index) => {
+                return tab.indexOf(element) === index;
+            });
+            return unikaty;
+        }
+        let tab = [1, 1, 2, 3, 3, 3, 5];
+        console.log(fun(tab)); //[1, 2, 3, 5]
+        let tab1 = ['A', 'B', 'A', 'C', 'B'];
+        console.log(fun(tab1)); //['A', 'B', 'C']
+    </script>
+</body>
+</html>

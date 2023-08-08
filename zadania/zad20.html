@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <button>Wciśniej mnie</button>
+    <script>
+        let output = document.querySelector("button");
+        let changecolor = document.querySelector("html");
+        output.addEventListener("click", function(){
+            changecolor.classList.toggle("background");
+        });
+    </script>
+</body>
+</html>

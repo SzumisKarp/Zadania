@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text&display=swap');
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id = "counter">
+        <p id = "playerScore">Player Score: 0</p>
+        <p id = "computerScore">Computer Score: 0</p>
+    </div>
+    <div id="playerChoice">
+        <button onclick=buttoner(0)><img src="rock.jpg" id="rock"></button>
+        <button onclick=buttoner(1)><img src="paper.jpg" id="paper"></button>
+        <button onclick=buttoner(2)><img src="scissors.jpg" id="scissors"></button>
+    </div>
+    <div id="win/lose">
+        <center>
+            <p id = "result">VS</p>
+        </center>
+    </div>
+    <div id="computerChoice">
+        <center>
+            <img src="computer.png" id="computer">
+        </center>
+    </div>
+
+    <script>
+        let allButtons = document.querySelectorAll("button");
+        let changeImage = document.querySelector("#computer");
+        let images = [`rock.jpg`, `paper.jpg`, `scissors.jpg`];
+        let result = document.querySelector("#result");
+        let descriptions = [`Player WIN!`, `Computer WIN!`, `DRAW!`];
+        let computerScore = document.querySelector("#computerScore");
+        let playerScore = document.querySelector("#playerScore");
+        let cScore = 0;
+        let pScore = 0;
+        function buttoner(index){
+            function LOTTO(min, max) {
+                return (Math.floor(Math.random() * (max - min)));
+            }
+            let playerMove = index;
+            let computerMove = LOTTO(-1, 2);
+            console.log(`użytkownik: ${images[index]} komputer: ${images[computerMove]}`);
+            // 0 = kamień || 1 = papier || 2 = nożyczki
+            if((playerMove == 0 && computerMove == 2) || (playerMove == 1 && computerMove == 2) || (playerMove == 2 && computerMove == 1) || 
+            (computerMove == 2 && playerMove == 0) || (computerMove == 2 && playerMove == 1) || (computerMove == 1 && playerMove == 2)){
+                result.innerText = descriptions[0];
+                changeImage.src = images[computerMove];
+                pScore++;
+                playerScore.innerText = `Player Score: ${pScore}`;
+                computerScore.innerText = `Computer Score: ${cScore}`;
+            }
+            else if((playerMove == 0 && computerMove == 1)||(playerMove == 1 && computerMove == 2)||(playerMove == 2 && computerMove == 0) || 
+            (computerMove == 1 && playerMove == 0) || (computerMove == 2 && playerMove == 1) || (computerMove == 0 && playerMove == 2)){
+                result.innerText = descriptions[1];
+                changeImage.src = images[computerMove];
+                cScore++;
+                playerScore.innerText = `Player Score: ${pScore}`;
+                computerScore.innerText = `Computer Score: ${cScore}`;
+            }
+            else if((playerMove == 0 && computerMove == 0)||(playerMove == 1 && computerMove == 1)||(playerMove == 2 && computerMove == 2)){
+                result.innerText = descriptions[2];
+                changeImage.src = images[computerMove];
+                playerScore.innerText = `Player Score: ${pScore}`;
+                computerScore.innerText = `Computer Score: ${cScore}`;
+            }
+        }
+    </script>
+</body>
+</html>

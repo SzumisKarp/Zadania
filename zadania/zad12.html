@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function coto(a){
+            if(isNaN(a) == false){
+                if(a > 0) console.log("Liczba dodatnia");
+                else if(a < 0) console.log("Liczba ujemna");
+                else console.log("Zero");
+            }
+            else{
+                console.log("nie liczba");
+            }
+        }
+        coto(23) //Liczba dodatnia
+        coto(-82) //Liczba ujemna
+        coto(0) //Zero
+        coto("nosadc") //nie liczba
+    </script>
+</body>
+</html>

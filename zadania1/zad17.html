@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(tab = []){
+            let tab1 = [];
+            let index = 0;
+            for(let i = 0; i < tab.length; i++){
+                if(tab[i]%2==0){
+                    tab1[index] = tab[i];
+                    index++;
+                }
+            }
+            return tab1;
+        }
+        tab = [2, 3, 4, 6, 8, 9, 0, 13];
+        console.log(fun(tab)); //[2, 4, 6, 8, 0]
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(tab = []){
+            function fun1(a, b){//tą funkcję wziąłem z internetu ale nadal nie rozumiem dlaczego tak to działa, wytłumaczysz mi w mailu proszę?
+                                //ale w sensue tą funkcję 'fun1' bo sort już znam i wiedziałem żeby jej użyć tylko że ona jest do napisów i
+                                //nie wiedziałem jak zrobić żeby mi liczby robiła i zobazyłem taki pomsł w necie tylko nawet jak mi napisali
+                                //wytłumaczenie to nadal nie rozumiałem. Wytłumaczysz mi proszę?
+                return a - b;
+            }
+            let tab1 = tab.sort(fun1);
+            return tab1;
+        }
+        tab = [1, 10, 5, 8, 2, 6, 6, 3, 43];
+        console.log(fun(tab));
+    </script>
+</body>
+</html>

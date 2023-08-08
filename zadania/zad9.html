@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let osoba = {
+            imie: "Zenek",
+            nazwisko: "Martyniuk",
+            wiek: 54
+        };
+        function fun(a = {}){
+            if(a.wiek >= 18){
+                console.log(`${a.imie} ${a.nazwisko} możę wziąć udział w konkursie`);
+            }
+            else{
+                console.log(`${a.imie} ${a.nazwisko} nie możę wziąć udziału w konkursie`);
+            }
+        }
+        fun(osoba);
+    </script>
+</body>
+</html>

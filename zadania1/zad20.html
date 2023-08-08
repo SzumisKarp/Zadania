@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(sek) {
+            let h = Math.floor(sek / 3600);
+            let min = Math.floor((sek % 3600) / 60);
+            let resztaSek = sek % 60;
+            let wyjscie = `${h.toString()}:${min.toString()}:${resztaSek.toString()}`;
+            return wyjscie;
+        }
+        console.log(fun(3600)); //1:0:0
+        console.log(fun(3661)); //1:1:1
+        console.log(fun(7163)); //1:59:23
+    </script>
+</body>
+</html>

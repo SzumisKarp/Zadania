@@ -1,0 +1,16 @@
+body{
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-size: 100px;
+}
+#playerChoice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#playerScore, #computerScore{
+    font-size: 25px;
+}
+p#result{
+    margin-top: 55px;
+    margin-bottom: 20px;
+}

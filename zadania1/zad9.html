@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function randomCODE(dlugosc){
+            function LOTTO(min, max) {
+                return (Math.floor(Math.random() * (max - min)));
+            }
+            function addition(a){
+                if(a%3==0){return (a/3);}
+                else if(a%3==1){return (Math.round(a/3))+1}
+                else{return (Math.round(a/3))-1}
+            }
+            let abc = "abcdefghijklmnopqrstuvwxyz"; let abc1 = "";
+            let ABC = abc.toUpperCase(); let ABC1 = "";
+            let a123 = "1234567890"; let a1231 = "";
+            for(let i = 0; i < Math.round(dlugosc/3); i++){abc1 += abc[LOTTO(1, (abc.length+1))];}
+            for(let i = 0; i < Math.round(dlugosc/3); i++){ABC1 += ABC[LOTTO(1, (ABC.length+1))];}
+            for(let i = 0; i < addition(dlugosc); i++){a1231 += a123[LOTTO(1, (a123.length+1))];}
+            let code = abc1 + ABC1 + a1231;
+            return code;
+        }
+        console.log(randomCODE(14));
+    </script>
+</body>
+</html>

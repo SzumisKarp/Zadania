@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function czyjest(a = [], b = 0){
+            let ile = 0
+            for(let i = 0; i < a.length; i++){if(b == a[i]) ile++;}
+            if(ile > 0) console.log(true);
+            else console.log(false);
+        }
+        
+        let tab = [1, 7, 2, 9, 4, 0, 4, 8]
+        czyjest(tab, 10); //false
+        czyjest(tab, 8); //true
+    </script>
+</body>
+</html>

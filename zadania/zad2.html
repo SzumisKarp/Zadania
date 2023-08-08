@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(a, b){
+            if (isNaN(a) == false && isNaN(b) == false) {
+                let suma = a + b;
+                console.log(suma);
+            }
+            else{
+                console.log("ERROR");
+            }
+        }
+        fun(1, "ada"); //wynik "ERROR"
+        fun(1, 2); //wynik 3
+    </script>
+</body>
+</html>

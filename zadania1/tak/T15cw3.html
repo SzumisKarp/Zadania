@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 1.5cm;
+            width: 1.5cm;
+        }
+        .changeColores{
+            background-color: greenyellow;
+        }
+        .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        p, div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "image">
+        <img src="1.jpg">
+    </div>
+    <p>Kociak śpi na fotelu</p>
+    <div class = "buttons">
+        <button class="przycisk0 changeColores" onclick=buttoner(0)>1</button>
+        <button class="przycisk1" onclick=buttoner(1)>2</button>
+        <button class="przycisk2" onclick=buttoner(2)>3</button>
+        <button class="przycisk3" onclick=buttoner(3)>4</button>
+    </div>
+    <script>
+        let images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
+        let descriptions = [`Kociak śpi na fotelu`, `Słodziutki kotek z gazetą na głowie`, `Drapieżny kot na polowaniu z ostrym wzrokiem`, `Głupiutki kotek na drzewie`];
+        let changeImage = document.querySelector("img");
+        let allButtons = document.querySelectorAll("button");
+        let changeParagraph = document.querySelector("p");
+        function buttoner(index){
+            changeParagraph.innerText = descriptions[index];
+            changeImage.src = images[index];
+            for(let i = 0; i < allButtons.length; i++){
+                allButtons[i].classList.remove("changeColores")
+            }
+            let changeColor = document.querySelector(`.przycisk${index}`);
+            changeColor.classList.add("changeColores");
+        }
+    </script>
+</body>
+</html>

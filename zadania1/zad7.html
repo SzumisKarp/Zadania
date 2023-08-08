@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun(text = ""){
+            let text1 = text.toLowerCase();
+            if (text1 === text1.split("").reverse().join("")) {
+                return true;
+            }
+            return false;
+        }
+        console.log(fun("kajak"));
+        //nie mam pomysłu jak usunąć znaki specjalne ale znalazłem coś takiego jak 'reverse()' i 'join()' i to mega pomogło
+    </script>
+</body>
+</html>
